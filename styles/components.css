@@ -378,6 +378,13 @@ body[data-season="winter"] .season-strip__summer {
   color: var(--snow);
 }
 
+.footer__logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+}
+
 .footer__logo svg {
   width: 36px;
   height: 36px;
