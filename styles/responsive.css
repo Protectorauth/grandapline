@@ -1,0 +1,172 @@
+@media (max-width: 1280px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .treatment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 70px;
+  }
+
+  .navbar__links,
+  .navbar__actions .btn--teal,
+  .navbar__actions .lang-toggle {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__actions {
+    gap: 0.75rem;
+  }
+
+  .booking-bar {
+    bottom: 0;
+    top: auto;
+  }
+
+  .booking-bar__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .booking-bar__field {
+    min-width: 100%;
+  }
+
+  .card-grid,
+  .card-grid--2,
+  .activities-grid,
+  .testimonial-grid,
+  .menu-grid,
+  .package-grid,
+  .split-section,
+  .contact-grid,
+  .star-field__content {
+    grid-template-columns: 1fr;
+  }
+
+  .season-strip__grid,
+  .trail-stats,
+  .amenity-strip__grid,
+  .facility-strip,
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .treatment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+  }
+
+  .hero__ctas .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .parallax-section,
+  .hero--page .hero__bg,
+  .cta-section {
+    background-attachment: scroll;
+  }
+
+  .split-section--reverse {
+    direction: ltr;
+  }
+
+  .split-section__image {
+    height: 300px;
+  }
+
+  .elevation-badge {
+    font-size: 0.55rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .hero .elevation-badge {
+    top: calc(var(--nav-height) + 1rem);
+    left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .season-strip__grid,
+  .trail-stats,
+  .amenity-strip__grid,
+  .facility-strip,
+  .team-grid,
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar__logo-sub {
+    display: none;
+  }
+
+  .navbar__logo-name {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .tilt-card {
+    min-height: 300px;
+  }
+
+  .mobile-menu a {
+    font-size: 1.5rem;
+  }
+
+  .trail-marker__sign::after {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .booking-bar {
+    top: calc(3px + var(--nav-height));
+    bottom: auto;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Touch devices - disable tilt */
+@media (hover: none) and (pointer: coarse) {
+  .tilt-card,
+  .activity-card {
+    transform: none !important;
+  }
+}

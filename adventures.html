@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adventure Activities & Tours at Grand Alpine Hotel, Mount Cook.">
+  <title>Adventures | Grand Alpine Hotel</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/booking-bar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/adventures.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body data-season="summer">
+  <div class="altitude-bar" aria-hidden="true"><div class="altitude-bar__fill"></div></div>
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/><path d="M20 14L12 30h16L20 14z" fill="#0D4F5C"/></svg>
+        <div class="navbar__logo-text"><span class="navbar__logo-name">GRAND ALPINE</span><span class="navbar__logo-sub">HOTEL — MOUNT COOK — EST. 2007</span></div>
+      </a>
+      <nav class="navbar__nav">
+        <ul class="navbar__links">
+          <li><a href="index.html" data-en="Home" data-mi="Kāinga">Home</a></li>
+          <li><a href="rooms.html" data-en="Rooms" data-mi="Rūma">Rooms</a></li>
+          <li><a href="dining.html" data-en="Dining" data-mi="Kai">Dining</a></li>
+          <li><a href="spa.html" data-en="Spa" data-mi="Roto">Spa</a></li>
+          <li><a href="adventures.html" data-en="Adventures" data-mi="Tūāhuatanga">Adventures</a></li>
+          <li><a href="events.html" data-en="Events" data-mi="Hui">Events</a></li>
+          <li><a href="contact.html" data-en="Contact" data-mi="Whakapā">Contact</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <div class="season-toggle"><button class="season-toggle__btn active" data-season="summer">☀</button><button class="season-toggle__btn" data-season="winter">❄</button></div>
+          <button class="lang-toggle">EN / MI</button>
+          <a href="contact.html" class="btn btn--teal" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</a>
+        </div>
+      </nav>
+      <button class="navbar__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-menu"><a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="dining.html">Dining</a><a href="spa.html">Spa</a><a href="adventures.html">Adventures</a><a href="events.html">Events</a><a href="contact.html">Contact</a></nav>
+  <div class="booking-bar">
+    <div class="booking-bar__inner">
+      <div class="booking-bar__field"><label data-en="Check-In" data-mi="Rā Uru">Check-In</label><input type="date"></div>
+      <div class="booking-bar__field"><label data-en="Check-Out" data-mi="Rā Puta">Check-Out</label><input type="date"></div>
+      <div class="booking-bar__field"><label data-en="Guests" data-mi="Manuhiri">Guests</label><select><option>1</option><option>2</option><option>4</option></select></div>
+      <div class="booking-bar__field"><label data-en="Season" data-mi="Kōanga/Hōtoke">Season</label><select data-booking-season><option value="summer">Summer</option><option value="winter">Winter</option></select></div>
+      <button class="btn btn--amber" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero hero--page hero--adventures">
+      <div class="hero__bg hero__bg--summer"></div>
+      <div class="hero__bg hero__bg--winter"></div>
+      <div class="hero__overlay"></div>
+      <div class="snow-container" aria-hidden="true"></div>
+      <div class="elevation-badge">3,724m / AORAKI MOUNT COOK</div>
+      <div class="hero__content">
+        <h1 class="hero__title"><span data-en="Alpine Adventures" data-mi="Ngā Tūāhuatanga Alpaina">Alpine Adventures</span></h1>
+        <p class="hero__maori">Ngā Tūāhuatanga Alpaina</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar reveal">
+          <button class="filter-bar__btn active" data-filter="all" data-en="All" data-mi="Katoa">All</button>
+          <button class="filter-bar__btn" data-filter="summer" data-en="Summer" data-mi="Kōanga">Summer</button>
+          <button class="filter-bar__btn" data-filter="winter" data-en="Winter" data-mi="Hōtoke">Winter</button>
+          <button class="filter-bar__btn" data-filter="year-round" data-en="Year-Round" data-mi="Ngā Tau Katoa">Year-Round</button>
+        </div>
+
+        <div class="activities-grid reveal">
+          <div class="activity-card" data-activity-season="year-round">
+            <div class="activity-card__image card-img-hiking"></div>
+            <div class="activity-card__body">
+              <span class="activity-card__badge" data-en="Year-Round" data-mi="Ngā Tau Katoa">Year-Round</span>
+              <h3 class="activity-card__title" data-en="Guided Alpine Hiking" data-mi="Hīkoi Alpaina Arataki">Guided Alpine Hiking</h3>
+              <p class="activity-card__desc" data-en="Traverse ancient glacial valleys and alpine meadows with certified guides through Aoraki Mount Cook National Park." data-mi="Haere i ngā riu kōpatapata me ngā pārekereke alpaina me ngā kaiārahi tohu.">Traverse ancient glacial valleys and alpine meadows with certified guides through Aoraki Mount Cook National Park.</p>
+              <div class="activity-card__meta">
+                <span data-en="Full Day" data-mi="Rā Katoa">Full Day</span>
+                <span data-en="Moderate-Hard" data-mi="Waenganui-Kaha">Moderate-Hard</span>
+              </div>
+              <button class="btn btn--teal" data-book-activity data-en="Book This Activity" data-mi="Rēhita tēnei Mahi">Book This Activity</button>
+            </div>
+          </div>
+
+          <div class="activity-card" data-activity-season="year-round">
+            <div class="activity-card__image card-img-stargazing"></div>
+            <div class="activity-card__body">
+              <span class="activity-card__badge" data-en="Year-Round" data-mi="Ngā Tau Katoa">Year-Round</span>
+              <h3 class="activity-card__title" data-en="Glacier Stargazing Tour" data-mi="Haerenga Mātai Whetū Kōpatapata">Glacier Stargazing Tour</h3>
+              <p class="activity-card__desc" data-en="Experience the Aoraki Mackenzie Dark Sky Reserve with expert astronomers. Telescopes, hot drinks, and the Milky Way above." data-mi="Whakamātauria te Rahui Rangi Pōuri o Aoraki Mackenzie me ngā mātai whetū tohunga.">Experience the Aoraki Mackenzie Dark Sky Reserve with expert astronomers. Telescopes, hot drinks, and the Milky Way above.</p>
+              <div class="activity-card__meta">
+                <span data-en="Evening" data-mi="Ahiahi">Evening</span>
+                <span data-en="Easy" data-mi="Ngāwari">Easy</span>
+              </div>
+              <button class="btn btn--teal" data-book-activity data-en="Book This Activity" data-mi="Rēhita tēnei Mahi">Book This Activity</button>
+            </div>
+          </div>
+
+          <div class="activity-card" data-activity-season="winter">
+            <div class="activity-card__image card-img-skiing"></div>
+            <div class="activity-card__body">
+              <span class="activity-card__badge" data-en="Winter" data-mi="Hōtoke">Winter</span>
+              <h3 class="activity-card__title" data-en="Ski & Snowboard" data-mi="Reti me te Papa Hukapapa">Ski & Snowboard</h3>
+              <p class="activity-card__desc" data-en="Fresh powder on Mount Cook alpine terrain. Full-day guided sessions for all skill levels with equipment hire available." data-mi="He hukapapa hou i ngā whenua alpaina o Aoraki. Ngā hāora katoa mō ngā taumata katoa.">Fresh powder on Mount Cook alpine terrain. Full-day guided sessions for all skill levels with equipment hire available.</p>
+              <div class="activity-card__meta">
+                <span data-en="Full Day" data-mi="Rā Katoa">Full Day</span>
+                <span data-en="All Levels" data-mi="Ngā Taumata Katoa">All Levels</span>
+              </div>
+              <button class="btn btn--teal" data-book-activity data-en="Book This Activity" data-mi="Rēhita tēnei Mahi">Book This Activity</button>
+            </div>
+          </div>
+
+          <div class="activity-card" data-activity-season="winter">
+            <div class="activity-card__image placeholder-snow"></div>
+            <div class="activity-card__body">
+              <span class="activity-card__badge" data-en="Winter" data-mi="Hōtoke">Winter</span>
+              <h3 class="activity-card__title" data-en="Snowshoeing Expedition" data-mi="Haerenga Hīkoi Hukapapa">Snowshoeing Expedition</h3>
+              <p class="activity-card__desc" data-en="Explore silent snow-covered valleys on snowshoes. A peaceful way to experience the winter wilderness of the Southern Alps." data-mi="Tūhura i ngā riu hukapapa marino mā runga i ngā hu hukapapa.">Explore silent snow-covered valleys on snowshoes. A peaceful way to experience the winter wilderness of the Southern Alps.</p>
+              <div class="activity-card__meta">
+                <span data-en="Half Day" data-mi="Haurua Rā">Half Day</span>
+                <span data-en="Easy-Moderate" data-mi="Ngāwari-Waenganui">Easy-Moderate</span>
+              </div>
+              <button class="btn btn--teal" data-book-activity data-en="Book This Activity" data-mi="Rēhita tēnei Mahi">Book This Activity</button>
+            </div>
+          </div>
+
+          <div class="activity-card" data-activity-season="summer">
+            <div class="activity-card__image placeholder-teal"></div>
+            <div class="activity-card__body">
+              <span class="activity-card__badge" data-en="Summer" data-mi="Kōanga">Summer</span>
+              <h3 class="activity-card__title" data-en="Mountain Bike Trails" data-mi="Ara Pahikara Maunga">Mountain Bike Trails</h3>
+              <p class="activity-card__desc" data-en="Ride alpine single-track through lupin-lined valleys with glacier lake views. Bikes and safety gear provided." data-mi="Eke i ngā ara kotahi i ngā riu rīpene lupin me te tiro kōpatapata.">Ride alpine single-track through lupin-lined valleys with glacier lake views. Bikes and safety gear provided.</p>
+              <div class="activity-card__meta">
+                <span data-en="Half Day" data-mi="Haurua Rā">Half Day</span>
+                <span data-en="Moderate" data-mi="Waenganui">Moderate</span>
+              </div>
+              <button class="btn btn--teal" data-book-activity data-en="Book This Activity" data-mi="Rēhita tēnei Mahi">Book This Activity</button>
+            </div>
+          </div>
+
+          <div class="activity-card" data-activity-season="year-round">
+            <div class="activity-card__image placeholder-mountain"></div>
+            <div class="activity-card__body">
+              <span class="activity-card__badge" data-en="Year-Round" data-mi="Ngā Tau Katoa">Year-Round</span>
+              <h3 class="activity-card__title" data-en="Helicopter Alpine Tour" data-mi="Haerenga Topatopa Alpaina">Helicopter Alpine Tour</h3>
+              <p class="activity-card__desc" data-en="Soar above glaciers, snow peaks, and turquoise lakes on a breathtaking two-hour helicopter adventure over Aoraki country." data-mi="Rere i runga i ngā kōpatapata, ngā taumata hukapapa, me ngā roto kōwhaiwhai i te whenua o Aoraki.">Soar above glaciers, snow peaks, and turquoise lakes on a breathtaking two-hour helicopter adventure over Aoraki country.</p>
+              <div class="activity-card__meta">
+                <span data-en="2 Hours" data-mi="2 Haora">2 Hours</span>
+                <span data-en="Easy" data-mi="Ngāwari">Easy</span>
+              </div>
+              <button class="btn btn--teal" data-book-activity data-en="Book This Activity" data-mi="Rēhita tēnei Mahi">Book This Activity</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-cta stone-texture">
+      <div class="container reveal">
+        <h2 data-en="All Adventures Led by Certified Alpine Guides" data-mi="Ko ngā Kaiārahi Matatau e Ārahi ana i ngā Tūāhuatanga Katoa">All Adventures Led by Certified Alpine Guides</h2>
+        <p class="maori-text">Ko ngā Kaiārahi Matatau e Ārahi ana i ngā Tūāhuatanga Katoa</p>
+        <a href="contact.html" class="btn btn--amber" data-en="Enquire About Custom Tours" data-mi="Uiui mō ngā Haerenga Ritenga">Enquire About Custom Tours</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer stone-texture">
+    <div class="footer__headline"><h2 data-en="Adventure Awaits at Every Altitude" data-mi="He Tūāhuatanga kei ia Teiteitanga">Adventure Awaits at Every Altitude</h2></div>
+    <div class="footer__grid">
+      <div class="footer__col"><div class="footer__logo"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/></svg><span>GRAND ALPINE</span></div><p>Seventeen years of alpine hospitality at the foot of Aoraki.</p></div>
+      <div class="footer__col"><h4>Explore</h4><ul><li><a href="adventures.html">Adventures</a></li><li><a href="events.html">Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h4>Stay & Dine</h4><ul><li><a href="rooms.html">Rooms</a></li><li><a href="dining.html">Dining</a></li><li><a href="spa.html">Spa</a></li></ul></div>
+      <div class="footer__col"><h4>Contact</h4><div class="footer__contact-item"><strong>Email</strong><a href="mailto:stay@grandalpinehotel.nz">stay@grandalpinehotel.nz</a></div><div class="footer__contact-item"><strong>Address</strong>1 Bowen Drive, Mount Cook Village, Aoraki Mount Cook 7999, Canterbury, New Zealand</div></div>
+    </div>
+    <div class="footer__bottom"><p>© 2024 GRAND ALPINE HOTEL — EST. 2007</p></div>
+  </footer>
+  <script src="js/season.js"></script><script src="js/language.js"></script><script src="js/main.js"></script><script src="js/tilt.js"></script><script src="js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact & Reservations at Grand Alpine Hotel, Mount Cook.">
+  <title>Contact | Grand Alpine Hotel</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/booking-bar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body data-season="summer">
+  <div class="altitude-bar" aria-hidden="true"><div class="altitude-bar__fill"></div></div>
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/><path d="M20 14L12 30h16L20 14z" fill="#0D4F5C"/></svg>
+        <div class="navbar__logo-text"><span class="navbar__logo-name">GRAND ALPINE</span><span class="navbar__logo-sub">HOTEL — MOUNT COOK — EST. 2007</span></div>
+      </a>
+      <nav class="navbar__nav">
+        <ul class="navbar__links">
+          <li><a href="index.html" data-en="Home" data-mi="Kāinga">Home</a></li>
+          <li><a href="rooms.html" data-en="Rooms" data-mi="Rūma">Rooms</a></li>
+          <li><a href="dining.html" data-en="Dining" data-mi="Kai">Dining</a></li>
+          <li><a href="spa.html" data-en="Spa" data-mi="Roto">Spa</a></li>
+          <li><a href="adventures.html" data-en="Adventures" data-mi="Tūāhuatanga">Adventures</a></li>
+          <li><a href="events.html" data-en="Events" data-mi="Hui">Events</a></li>
+          <li><a href="contact.html" data-en="Contact" data-mi="Whakapā">Contact</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <div class="season-toggle"><button class="season-toggle__btn active" data-season="summer">☀</button><button class="season-toggle__btn" data-season="winter">❄</button></div>
+          <button class="lang-toggle">EN / MI</button>
+          <a href="contact.html" class="btn btn--teal" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</a>
+        </div>
+      </nav>
+      <button class="navbar__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-menu"><a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="dining.html">Dining</a><a href="spa.html">Spa</a><a href="adventures.html">Adventures</a><a href="events.html">Events</a><a href="contact.html">Contact</a></nav>
+  <div class="booking-bar">
+    <div class="booking-bar__inner">
+      <div class="booking-bar__field"><label data-en="Check-In" data-mi="Rā Uru">Check-In</label><input type="date"></div>
+      <div class="booking-bar__field"><label data-en="Check-Out" data-mi="Rā Puta">Check-Out</label><input type="date"></div>
+      <div class="booking-bar__field"><label data-en="Guests" data-mi="Manuhiri">Guests</label><select><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+      <div class="booking-bar__field"><label data-en="Season" data-mi="Kōanga/Hōtoke">Season</label><select data-booking-season><option value="summer">Summer</option><option value="winter">Winter</option></select></div>
+      <button class="btn btn--amber" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero hero--page hero--contact">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title"><span data-en="Contact & Reservations" data-mi="Whakapā Mai">Contact & Reservations</span></h1>
+        <p class="hero__maori">Whakapā Mai</p>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container">
+        <div class="contact-grid reveal">
+          <div class="info-card">
+            <div class="info-card__item">
+              <strong>Email</strong>
+              <p><a href="mailto:stay@grandalpinehotel.nz">stay@grandalpinehotel.nz</a></p>
+            </div>
+            <div class="info-card__item">
+              <strong data-en="Address" data-mi="Wāhi Noho">Address</strong>
+              <p>1 Bowen Drive<br>Mount Cook Village<br>Aoraki Mount Cook National Park<br>Canterbury 7999<br>New Zealand</p>
+            </div>
+            <div class="info-card__item">
+              <strong data-en="Check-In / Check-Out" data-mi="Rā Uru / Rā Puta">Check-In / Check-Out</strong>
+              <p data-en="Check-In: 2:00 PM | Check-Out: 11:00 AM" data-mi="Rā Uru: 2:00 PM | Rā Puta: 11:00 AM">Check-In: 2:00 PM | Check-Out: 11:00 AM</p>
+            </div>
+            <div class="info-card__item">
+              <strong data-en="Front Desk" data-mi="Te Papatohu">Front Desk</strong>
+              <p data-en="Available 24/7" data-mi="Wātea 24/7">Available 24/7</p>
+            </div>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+              <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            </div>
+          </div>
+
+          <div>
+            <form class="reservation-form" novalidate>
+              <div class="form-group">
+                <label for="fullname" data-en="Full Name" data-mi="Ingoa Katoa">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+              </div>
+              <div class="form-group">
+                <label for="email" data-en="Email Address" data-mi="Īmēra">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="enquiry-type" data-en="Enquiry Type" data-mi="Momo Uiui">Enquiry Type</label>
+                <select id="enquiry-type" name="enquiry-type">
+                  <option data-en="Room Booking" data-mi="Rēhita Rūma">Room Booking</option>
+                  <option data-en="Dining" data-mi="Kai">Dining</option>
+                  <option data-en="Spa" data-mi="Roto">Spa</option>
+                  <option data-en="Adventures" data-mi="Tūāhuatanga">Adventures</option>
+                  <option data-en="Conference" data-mi="Hui">Conference</option>
+                  <option data-en="General" data-mi="Whānui">General</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkin" data-en="Check-In Date" data-mi="Rā Uru">Check-In Date</label>
+                  <input type="date" id="checkin" name="checkin">
+                </div>
+                <div class="form-group">
+                  <label for="checkout" data-en="Check-Out Date" data-mi="Rā Puta">Check-Out Date</label>
+                  <input type="date" id="checkout" name="checkout">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="guests" data-en="Number of Guests" data-mi="Te Maha o ngā Manuhiri">Number of Guests</label>
+                  <select id="guests" name="guests">
+                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8+</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="season-pref" data-en="Season Preference" data-mi="Kōwhiringa Kōanga/Hōtoke">Season Preference</label>
+                  <select id="season-pref" name="season-pref">
+                    <option data-en="Summer" data-mi="Kōanga">Summer</option>
+                    <option data-en="Winter" data-mi="Hōtoke">Winter</option>
+                    <option data-en="No preference" data-mi="Kāore he kōwhiringa">No preference</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="requests" data-en="Special Requests" data-mi="Tononga Motuhake">Special Requests</label>
+                <textarea id="requests" name="requests" rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn btn--teal" style="width:100%;" data-en="Send Enquiry" data-mi="Tuku Pātai">Send Enquiry</button>
+            </form>
+            <div class="form-success">
+              <h3 data-en="Enquiry Received" data-mi="Kua Whiwhi te Pātai">Enquiry Received</h3>
+              <p data-en="Our team will respond within 24 hours. Adventure awaits!" data-mi="Ka whakautu tō mātou tīma i roto i te 24 haora. E tatari ana te tūāhuatanga!">Our team will respond within 24 hours. Adventure awaits!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section stone-texture">
+      <h2 data-en="Located in Mount Cook Village" data-mi="Kei Mount Cook Village">Located in Mount Cook Village</h2>
+      <p data-en="1 Bowen Drive, Mount Cook Village — within Aoraki Mount Cook National Park, Canterbury 7999, New Zealand" data-mi="1 Bowen Drive, Mount Cook Village — kei roto i Te Pāka o Aoraki Mount Cook, Canterbury 7999, Aotearoa">1 Bowen Drive, Mount Cook Village — within Aoraki Mount Cook National Park, Canterbury 7999, New Zealand</p>
+      <p data-en="3.5 hours from Christchurch | 4.5 hours from Queenstown" data-mi="3.5 haora mai i Ōtautahi | 4.5 haora mai i Tāwhaki">3.5 hours from Christchurch | 4.5 hours from Queenstown</p>
+      <div class="elevation-badge">3,724m AORAKI / MOUNT COOK</div>
+    </section>
+  </main>
+
+  <footer class="footer stone-texture">
+    <div class="footer__headline"><h2 data-en="Adventure Awaits at Every Altitude" data-mi="He Tūāhuatanga kei ia Teiteitanga">Adventure Awaits at Every Altitude</h2></div>
+    <div class="footer__grid">
+      <div class="footer__col"><div class="footer__logo"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/></svg><span>GRAND ALPINE</span></div><p>Seventeen years of alpine hospitality at the foot of Aoraki.</p></div>
+      <div class="footer__col"><h4>Explore</h4><ul><li><a href="adventures.html">Adventures</a></li><li><a href="events.html">Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h4>Stay & Dine</h4><ul><li><a href="rooms.html">Rooms</a></li><li><a href="dining.html">Dining</a></li><li><a href="spa.html">Spa</a></li></ul></div>
+      <div class="footer__col"><h4>Contact</h4><div class="footer__contact-item"><strong>Email</strong><a href="mailto:stay@grandalpinehotel.nz">stay@grandalpinehotel.nz</a></div><div class="footer__contact-item"><strong>Address</strong>1 Bowen Drive, Mount Cook Village, Aoraki Mount Cook 7999, Canterbury, New Zealand</div><div class="footer__contact-item"><strong>Hours</strong><span data-en="Front Desk 24/7" data-mi="Papatohu 24/7">Front Desk 24/7</span></div></div>
+    </div>
+    <div class="footer__bottom"><p>© 2024 GRAND ALPINE HOTEL — EST. 2007 — MOUNT COOK, AOTEAROA</p><p class="maori-line">Kei raro i te maru o Aoraki — Tekau mā whitu ngā tau</p></div>
+  </footer>
+  <script src="js/season.js"></script><script src="js/language.js"></script><script src="js/main.js"></script><script src="js/tilt.js"></script><script src="js/booking.js"></script>
+</body>
+</html>

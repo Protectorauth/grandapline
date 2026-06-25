@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conference & Events at Grand Alpine Hotel, Mount Cook.">
+  <title>Events | Grand Alpine Hotel</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/booking-bar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body data-season="summer">
+  <div class="altitude-bar" aria-hidden="true"><div class="altitude-bar__fill"></div></div>
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/><path d="M20 14L12 30h16L20 14z" fill="#0D4F5C"/></svg>
+        <div class="navbar__logo-text"><span class="navbar__logo-name">GRAND ALPINE</span><span class="navbar__logo-sub">HOTEL — MOUNT COOK — EST. 2007</span></div>
+      </a>
+      <nav class="navbar__nav">
+        <ul class="navbar__links">
+          <li><a href="index.html" data-en="Home" data-mi="Kāinga">Home</a></li>
+          <li><a href="rooms.html" data-en="Rooms" data-mi="Rūma">Rooms</a></li>
+          <li><a href="dining.html" data-en="Dining" data-mi="Kai">Dining</a></li>
+          <li><a href="spa.html" data-en="Spa" data-mi="Roto">Spa</a></li>
+          <li><a href="adventures.html" data-en="Adventures" data-mi="Tūāhuatanga">Adventures</a></li>
+          <li><a href="events.html" data-en="Events" data-mi="Hui">Events</a></li>
+          <li><a href="contact.html" data-en="Contact" data-mi="Whakapā">Contact</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <div class="season-toggle"><button class="season-toggle__btn active" data-season="summer">☀</button><button class="season-toggle__btn" data-season="winter">❄</button></div>
+          <button class="lang-toggle">EN / MI</button>
+          <a href="contact.html" class="btn btn--teal" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</a>
+        </div>
+      </nav>
+      <button class="navbar__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-menu"><a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="dining.html">Dining</a><a href="spa.html">Spa</a><a href="adventures.html">Adventures</a><a href="events.html">Events</a><a href="contact.html">Contact</a></nav>
+  <div class="booking-bar">
+    <div class="booking-bar__inner">
+      <div class="booking-bar__field"><label data-en="Check-In" data-mi="Rā Uru">Check-In</label><input type="date"></div>
+      <div class="booking-bar__field"><label data-en="Check-Out" data-mi="Rā Puta">Check-Out</label><input type="date"></div>
+      <div class="booking-bar__field"><label data-en="Guests" data-mi="Manuhiri">Guests</label><select><option>10</option><option>25</option><option>50</option><option>100+</option></select></div>
+      <div class="booking-bar__field"><label data-en="Season" data-mi="Kōanga/Hōtoke">Season</label><select data-booking-season><option value="summer">Summer</option><option value="winter">Winter</option></select></div>
+      <button class="btn btn--amber" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero hero--page hero--events">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title"><span data-en="Conferences & Events" data-mi="Ngā Hui me ngā Kaupeka">Conferences & Events</span></h1>
+        <p class="hero__maori">Ngā Hui me ngā Kaupeka</p>
+      </div>
+    </section>
+
+    <section class="section conference-section">
+      <div class="container">
+        <div class="split-section reveal">
+          <div class="framed-image tilt-image">
+            <img src="assets/images/events-conference.jpg" alt="Summit Conference Centre with Mount Cook views" loading="lazy" width="600" height="400">
+          </div>
+          <div class="split-section__content">
+            <span class="label" data-en="The Summit Conference Centre" data-mi="Te Pokapū Hui Taumata">The Summit Conference Centre</span>
+            <h2 data-en="Meet at the Top of New Zealand" data-mi="Tūhono i te Taumata o Aotearoa">Meet at the Top of New Zealand</h2>
+            <p data-en="Our modern conference facility accommodates up to 150 delegates with full-height windows framing Aoraki Mount Cook. Timber ceilings, teal accent furnishings, and mountain air create an inspiring setting for corporate retreats, AGMs, and product launches." data-mi="Ka whakauru tō mātou whare hui hou tae noa ki te 150 mema me ngā matapihi teitei ki a Aoraki.">Our modern conference facility accommodates up to 150 delegates with full-height windows framing Aoraki Mount Cook. Timber ceilings, teal accent furnishings, and mountain air create an inspiring setting for corporate retreats, AGMs, and product launches.</p>
+            <ul class="feature-list">
+              <li data-en="Capacity up to 150 delegates" data-mi="Te nui tae noa ki te 150 mema">Capacity up to 150 delegates</li>
+              <li data-en="Full AV and presentation equipment" data-mi="Taputapu AV me te whakaaturanga katoa">Full AV and presentation equipment</li>
+              <li data-en="High-speed WiFi throughout" data-mi="WiFi tere i ngā wāhi katoa">High-speed WiFi throughout</li>
+              <li data-en="On-site catering and breakout rooms" data-mi="Kai me ngā rūma wehe i te wāhi">On-site catering and breakout rooms</li>
+              <li data-en="Mountain views and team building activities" data-mi="Tiro maunga me ngā mahi whakakotahi tīma">Mountain views and team building activities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-building-section">
+      <div class="container">
+        <div class="section-heading reveal" style="text-align:center;">
+          <span class="label" data-en="Team Building" data-mi="Whakakotahi Tīma">Team Building</span>
+          <h2 data-en="Bond Beyond the Boardroom" data-mi="Hononga i waho o te Rūma Hui">Bond Beyond the Boardroom</h2>
+        </div>
+        <div class="team-grid reveal">
+          <div class="team-card">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M24 8L8 40h32L24 8z"/></svg>
+            <h3 data-en="Guided Alpine Hike" data-mi="Hīkoi Alpaina Arataki">Guided Alpine Hike</h3>
+          </div>
+          <div class="team-card">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="20" r="4"/><path d="M8 40c0-8 7-14 16-14s16 6 16 14"/></svg>
+            <h3 data-en="Stargazing Experience" data-mi="Whakamātauatanga Mātai Whetū">Stargazing Experience</h3>
+          </div>
+          <div class="team-card">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 36l16-28 16 28"/></svg>
+            <h3 data-en="Ski Day" data-mi="Rā Reti">Ski Day</h3>
+          </div>
+          <div class="team-card">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h24M12 28h24M18 12v24"/></svg>
+            <h3 data-en="Cooking Class with Local Chef" data-mi="Akoranga Tunu me te Kaihautū Kai">Cooking Class with Local Chef</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section corporate-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="label" data-en="Packages" data-mi="Pūkete">Packages</span>
+          <h2 data-en="Corporate Packages" data-mi="Pūkete Kāwanatanga">Corporate Packages</h2>
+        </div>
+        <div class="package-grid reveal">
+          <div class="package-card">
+            <h3 data-en="Day Delegate" data-mi="Mema Rā">Day Delegate</h3>
+            <ul>
+              <li data-en="Conference room hire" data-mi="Rīhi rūma hui">Conference room hire</li>
+              <li data-en="Morning tea & lunch" data-mi="Tī ata me te tina">Morning tea & lunch</li>
+              <li data-en="AV equipment included" data-mi="Taputapu AV kei roto">AV equipment included</li>
+              <li data-en="WiFi access" data-mi="Uru WiFi">WiFi access</li>
+            </ul>
+          </div>
+          <div class="package-card">
+            <h3 data-en="Residential" data-mi="Noho">Residential</h3>
+            <ul>
+              <li data-en="2-night accommodation" data-mi="Noho 2 pō">2-night accommodation</li>
+              <li data-en="All meals included" data-mi="Ngā kai katoa kei roto">All meals included</li>
+              <li data-en="Team building activity" data-mi="Mahi whakakotahi tīma">Team building activity</li>
+              <li data-en="Spa pool access" data-mi="Uru roto wera">Spa pool access</li>
+            </ul>
+          </div>
+          <div class="package-card">
+            <h3 data-en="Custom" data-mi="Ritenga">Custom</h3>
+            <ul>
+              <li data-en="Tailored to your needs" data-mi="Whakaritea ki ō hiahia">Tailored to your needs</li>
+              <li data-en="Multi-day programmes" data-mi="Kaupapa maha rā">Multi-day programmes</li>
+              <li data-en="Adventure add-ons" data-mi="Tāpiri tūāhuatanga">Adventure add-ons</li>
+              <li data-en="Dedicated event coordinator" data-mi="Kaiwhakarite kaupapa">Dedicated event coordinator</li>
+            </ul>
+          </div>
+        </div>
+        <div class="reveal" style="text-align:center;margin-top:3rem;">
+          <a href="contact.html" class="btn btn--teal" data-en="Submit Conference Enquiry" data-mi="Tuku Pātai Hui">Submit Conference Enquiry</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer stone-texture">
+    <div class="footer__headline"><h2 data-en="Adventure Awaits at Every Altitude" data-mi="He Tūāhuatanga kei ia Teiteitanga">Adventure Awaits at Every Altitude</h2></div>
+    <div class="footer__grid">
+      <div class="footer__col"><div class="footer__logo"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/></svg><span>GRAND ALPINE</span></div><p>Seventeen years of alpine hospitality at the foot of Aoraki.</p></div>
+      <div class="footer__col"><h4>Explore</h4><ul><li><a href="adventures.html">Adventures</a></li><li><a href="events.html">Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h4>Stay & Dine</h4><ul><li><a href="rooms.html">Rooms</a></li><li><a href="dining.html">Dining</a></li><li><a href="spa.html">Spa</a></li></ul></div>
+      <div class="footer__col"><h4>Contact</h4><div class="footer__contact-item"><strong>Email</strong><a href="mailto:stay@grandalpinehotel.nz">stay@grandalpinehotel.nz</a></div><div class="footer__contact-item"><strong>Address</strong>1 Bowen Drive, Mount Cook Village, Aoraki Mount Cook 7999, Canterbury, New Zealand</div></div>
+    </div>
+    <div class="footer__bottom"><p>© 2024 GRAND ALPINE HOTEL — EST. 2007</p></div>
+  </footer>
+  <script src="js/season.js"></script><script src="js/language.js"></script><script src="js/main.js"></script><script src="js/tilt.js"></script><script src="js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.5s ease;
+}
+
+.hero--home .hero__bg--summer {
+  background-image: url('../assets/images/hero-mountain-summer.jpg');
+  opacity: 1;
+}
+
+.hero--home .hero__bg--winter {
+  background-image: url('../assets/images/hero-mountain-winter.jpg');
+  opacity: 0;
+}
+
+body[data-season="winter"] .hero--home .hero__bg--summer {
+  opacity: 0;
+}
+
+body[data-season="winter"] .hero--home .hero__bg--winter {
+  opacity: 1;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-dark);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+  padding: calc(var(--nav-height) + 3rem) 1.5rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero__label {
+  color: var(--teal-light);
+  margin-bottom: 1rem;
+}
+
+.hero__title {
+  font-size: var(--text-hero);
+  color: var(--snow);
+  max-width: 900px;
+  margin-bottom: 0.75rem;
+}
+
+.hero__maori {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-style: italic;
+  color: var(--teal-light);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* Page heroes */
+.hero--page {
+  min-height: 60vh;
+}
+
+.hero--page .hero__bg {
+  background-attachment: fixed;
+}
+
+.hero--rooms .hero__bg { background-image: url('../assets/images/rooms-mountain-view.jpg'); }
+.hero--dining .hero__bg { background-image: url('../assets/images/dining-restaurant.jpg'); }
+.hero--spa .hero__bg { background-image: url('../assets/images/spa-hot-pools.jpg'); }
+.hero--adventures .hero__bg--summer { background-image: url('../assets/images/adventures-hiking.jpg'); }
+.hero--adventures .hero__bg--winter { background-image: url('../assets/images/adventures-skiing.jpg'); }
+.hero--events .hero__bg { background-image: url('../assets/images/events-conference.jpg'); }
+.hero--contact .hero__bg { background-image: url('../assets/images/contact-lobby.jpg'); }
+
+.hero--adventures .hero__bg--winter { opacity: 0; }
+body[data-season="winter"] .hero--adventures .hero__bg--summer { opacity: 0; }
+body[data-season="winter"] .hero--adventures .hero__bg--winter { opacity: 1; }
+
+.hero--page .hero__title {
+  font-size: var(--text-h1);
+}
+
+.hero--page .hero__content {
+  text-align: left;
+}
+
+/* Elevation badge */
+.elevation-badge {
+  display: inline-block;
+  background: var(--teal-deep);
+  color: var(--snow);
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.6rem 1rem;
+  transform: rotate(-5deg);
+  border: 2px solid var(--teal-bright);
+  box-shadow: 3px 3px 0 var(--teal-mid);
+  position: absolute;
+  z-index: 4;
+}
+
+.hero .elevation-badge {
+  top: calc(var(--nav-height) + 2rem);
+  left: 1.5rem;
+}
+
+/* Scroll arrow */
+.scroll-arrow {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: var(--snow);
+  animation: bounceArrow 1.2s ease-in-out infinite;
+}
+
+.scroll-arrow svg {
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(12px); }
+}
+
+/* Snow particles */
+.snow-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body[data-season="winter"] .snow-container {
+  opacity: 1;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: 4px;
+  background: var(--snow);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  0% { transform: translateY(-10px) translateX(0); opacity: 0.7; }
+  100% { transform: translateY(100vh) translateX(20px); opacity: 0.2; }
+}
+
+/* Parallax sections */
+.parallax-section {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.parallax-section__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 28, 0.55);
+}
+
+.parallax-section__content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  color: var(--snow);
+}
+
+.parallax-section__content h2 {
+  font-size: var(--text-h2);
+  margin-bottom: 0.5rem;
+}
+
+.parallax-section__content .maori-text {
+  color: var(--teal-light);
+  margin-bottom: 1rem;
+}
+
+.parallax-section__content p {
+  max-width: 550px;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}

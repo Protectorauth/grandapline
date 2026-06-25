@@ -1,0 +1,934 @@
+/* Cards with tilt */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tilt-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+  min-height: 380px;
+}
+
+.tilt-card__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.tilt-card:hover .tilt-card__image {
+  transform: scale(1.05);
+}
+
+.tilt-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-summit);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: var(--snow);
+}
+
+.tilt-card__title {
+  font-size: var(--text-h3);
+  margin-bottom: 0.25rem;
+}
+
+.tilt-card__price {
+  font-family: var(--font-label);
+  font-size: var(--text-label);
+  letter-spacing: 0.1em;
+  color: var(--teal-light);
+}
+
+/* Activity cards */
+.activity-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--stone-dark);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.activity-card.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+.activity-card__image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+.activity-card__body {
+  padding: 1.5rem;
+  color: var(--snow);
+}
+
+.activity-card__badge {
+  display: inline-block;
+  background: var(--teal-bright);
+  color: var(--snow);
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.activity-card__title {
+  font-size: var(--text-h3);
+  margin-bottom: 0.5rem;
+}
+
+.activity-card__desc {
+  font-size: 0.95rem;
+  color: var(--stone-pale);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.activity-card__meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.activity-card__meta span {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--teal-light);
+}
+
+/* Season highlights strip */
+.season-strip {
+  background: var(--teal-pale);
+  padding: 2.5rem 0;
+}
+
+.season-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.season-strip__item {
+  text-align: center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.season-strip__item svg {
+  width: 48px;
+  height: 48px;
+  color: var(--teal-deep);
+  margin: 0 auto 0.75rem;
+}
+
+.season-strip__item .label {
+  color: var(--teal-deep);
+}
+
+.season-strip__summer,
+.season-strip__winter {
+  display: contents;
+}
+
+body[data-season="summer"] .season-strip__winter {
+  display: none;
+}
+
+body[data-season="winter"] .season-strip__summer {
+  display: none;
+}
+
+/* Trail marker stats */
+.trail-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.trail-marker {
+  text-align: center;
+  transform: rotate(var(--rotation, 0deg));
+  transition: transform 0.3s ease;
+}
+
+.trail-marker:hover {
+  transform: rotate(var(--rotation, 0deg)) scale(1.05);
+}
+
+.trail-marker__sign {
+  position: relative;
+  background: var(--timber);
+  color: var(--snow);
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  min-width: 140px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+}
+
+.trail-marker__sign::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 20px solid transparent;
+  border-left-color: var(--timber);
+  border-right: 0;
+}
+
+.trail-marker__number {
+  font-family: var(--font-label);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--teal-bright);
+  display: block;
+  line-height: 1;
+}
+
+.trail-marker__label {
+  font-family: var(--font-label);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--stone-mid);
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.trail-marker.wobble {
+  animation: wobble 0.6s ease;
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(var(--rotation, 0deg)); }
+  25% { transform: rotate(calc(var(--rotation, 0deg) + 3deg)); }
+  75% { transform: rotate(calc(var(--rotation, 0deg) - 3deg)); }
+}
+
+/* Testimonials */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: var(--snow);
+  padding: 2rem;
+  border-left: 4px solid var(--teal-bright);
+  box-shadow: 0 4px 20px rgba(13, 79, 92, 0.08);
+}
+
+.testimonial-card blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.testimonial-card cite {
+  font-family: var(--font-label);
+  font-size: var(--text-label);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--teal-mid);
+  font-style: normal;
+}
+
+/* Star field */
+.star-field {
+  position: relative;
+  background: var(--stone-dark);
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+.star-field__stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--snow);
+  border-radius: 50%;
+  animation: starPulse 3s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.star-field__content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  color: var(--snow);
+}
+
+.star-field__image {
+  position: relative;
+}
+
+.star-field__image img {
+  width: 100%;
+  border: 4px solid var(--teal-bright);
+  box-shadow: 8px 8px 0 var(--teal-deep);
+}
+
+.star-field__content h2 {
+  font-size: var(--text-h2);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.star-field__content .label {
+  color: var(--teal-light);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.star-field__content p {
+  color: var(--stone-pale);
+  line-height: 1.8;
+}
+
+/* Footer */
+.footer {
+  background: var(--stone-dark);
+  color: var(--stone-pale);
+  padding: 4rem 0 0;
+  position: relative;
+}
+
+.footer__headline {
+  text-align: center;
+  padding: 0 1.5rem 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer__headline h2 {
+  font-size: var(--text-h2);
+  color: var(--teal-bright);
+  margin-bottom: 0.5rem;
+}
+
+.footer__headline .maori-text {
+  color: var(--teal-light);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--snow);
+}
+
+.footer__logo svg {
+  width: 36px;
+  height: 36px;
+}
+
+.footer__logo span {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.footer__col p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.footer__col h4 {
+  font-family: var(--font-label);
+  font-size: var(--text-label);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--teal-light);
+  margin-bottom: 1rem;
+}
+
+.footer__col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer__col ul a {
+  font-size: 0.95rem;
+  transition: color var(--transition-fast);
+}
+
+.footer__col ul a:hover {
+  color: var(--teal-bright);
+}
+
+.footer__contact-item {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.footer__contact-item strong {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--teal-light);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer__social a {
+  color: var(--stone-pale);
+  transition: color var(--transition-fast);
+}
+
+.footer__social a:hover {
+  color: var(--teal-bright);
+}
+
+.footer__social svg {
+  width: 24px;
+  height: 24px;
+}
+
+.footer__bottom {
+  border-top: 3px solid var(--teal-deep);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.footer__bottom p {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--stone-light);
+}
+
+.footer__bottom .maori-line {
+  margin-top: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--stone-light);
+}
+
+/* Amenity strip */
+.amenity-strip {
+  background: var(--teal-deep);
+  padding: 3rem 0;
+}
+
+.amenity-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  color: var(--snow);
+}
+
+.amenity-strip__item svg {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 0.5rem;
+  color: var(--teal-light);
+}
+
+.amenity-strip__item span {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Menu cards */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.menu-card {
+  background: var(--snow);
+  padding: 2rem;
+  border-top: 4px solid var(--teal-bright);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.menu-card h3 {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--teal-deep);
+  margin-bottom: 1rem;
+}
+
+.menu-card__divider {
+  width: 40px;
+  height: 3px;
+  background: var(--teal-bright);
+  margin-bottom: 1rem;
+}
+
+.menu-card ul li {
+  padding: 0.4rem 0;
+  color: var(--text-mid);
+  border-bottom: 1px solid var(--stone-pale);
+  font-size: 0.95rem;
+}
+
+/* Treatment cards */
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.treatment-card {
+  background: var(--snow);
+  padding: 2rem 1.5rem;
+  border-top: 4px solid var(--teal-bright);
+  text-align: center;
+  transition: transform var(--transition-fast);
+}
+
+.treatment-card:hover {
+  transform: translateY(-4px);
+}
+
+.treatment-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--teal-deep);
+}
+
+.treatment-card .label {
+  color: var(--teal-mid);
+}
+
+/* Package cards */
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.package-card {
+  border: 2px solid var(--teal-bright);
+  padding: 2rem;
+  background: var(--snow);
+}
+
+.package-card h3 {
+  font-family: var(--font-label);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--teal-deep);
+  margin-bottom: 1rem;
+}
+
+.package-card ul li {
+  padding: 0.4rem 0;
+  color: var(--text-mid);
+  font-size: 0.95rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.package-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--teal-bright);
+  font-weight: 600;
+}
+
+/* Contact form */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+}
+
+.info-card {
+  background: var(--teal-pale);
+  padding: 2.5rem;
+  border-left: 4px solid var(--teal-bright);
+}
+
+.info-card__item {
+  margin-bottom: 1.5rem;
+}
+
+.info-card__item strong {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--teal-deep);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.info-card__item p {
+  color: var(--text-mid);
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group label {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--teal-deep);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--stone-pale);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--snow);
+  transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--teal-bright);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-success {
+  display: none;
+  background: var(--teal-pale);
+  border: 2px solid var(--teal-bright);
+  padding: 2rem;
+  text-align: center;
+  color: var(--teal-deep);
+}
+
+.form-success.visible {
+  display: block;
+}
+
+.form-success h3 {
+  font-size: var(--text-h3);
+  margin-bottom: 0.5rem;
+}
+
+/* Split section */
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.split-section--reverse {
+  direction: rtl;
+}
+
+.split-section--reverse > * {
+  direction: ltr;
+}
+
+.split-section__image {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.split-section__content h2 {
+  font-size: var(--text-h2);
+  margin-bottom: 1rem;
+}
+
+.split-section__content p {
+  color: var(--text-mid);
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.split-section__hours {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--teal-mid);
+  margin: 1.5rem 0;
+}
+
+/* Team building */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.team-card {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.team-card svg {
+  width: 48px;
+  height: 48px;
+  color: var(--teal-deep);
+  margin: 0 auto 1rem;
+}
+
+.team-card h3 {
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--teal-deep);
+}
+
+/* Spa facilities */
+.facility-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.facility-strip__item svg {
+  width: 40px;
+  height: 40px;
+  color: var(--teal-deep);
+  margin: 0 auto 0.5rem;
+}
+
+.facility-strip__item span {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--teal-mid);
+}
+
+/* Framed image */
+.framed-image {
+  position: relative;
+  border: 4px solid var(--teal-bright);
+  box-shadow: 8px 8px 0 var(--teal-deep);
+}
+
+.framed-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Adventure showcase season content */
+.adventure-showcase__summer,
+.adventure-showcase__winter {
+  display: contents;
+}
+
+body[data-season="summer"] .adventure-showcase__winter {
+  display: none;
+}
+
+body[data-season="winter"] .adventure-showcase__summer {
+  display: none;
+}
+
+/* CTA section */
+.cta-section {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.cta-section__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 79, 92, 0.7);
+}
+
+.cta-section__content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 1.5rem;
+  color: var(--snow);
+}
+
+.cta-section__content h2 {
+  font-size: var(--text-h2);
+  margin-bottom: 0.5rem;
+}
+
+.cta-section__content .maori-text {
+  color: var(--teal-light);
+  margin-bottom: 2rem;
+}
+
+/* Room section alternating */
+.room-section {
+  padding: 5rem 0;
+}
+
+.room-section:nth-child(even) {
+  background: var(--alpine-white);
+}
+
+.room-section:nth-child(odd) {
+  background: var(--teal-pale);
+}
+
+/* Location section */
+.location-section {
+  background: var(--stone-dark);
+  color: var(--stone-pale);
+  text-align: center;
+  padding: 4rem 1.5rem;
+  position: relative;
+}
+
+.location-section h2 {
+  font-size: var(--text-h2);
+  color: var(--snow);
+  margin-bottom: 1rem;
+}
+
+.location-section p {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+.location-section .elevation-badge {
+  position: relative;
+  top: auto;
+  left: auto;
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+/* Guided tours CTA */
+.guide-cta {
+  background: var(--teal-deep);
+  color: var(--snow);
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.guide-cta h2 {
+  font-size: var(--text-h2);
+  margin-bottom: 0.5rem;
+}
+
+.guide-cta .maori-text {
+  color: var(--teal-light);
+  margin-bottom: 2rem;
+}
+
+/* Enquiry note */
+.enquiry-note {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-mid);
+  font-size: 0.95rem;
+}
+
+.enquiry-note a {
+  color: var(--teal-deep);
+  font-weight: 600;
+}

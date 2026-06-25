@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grand Alpine Hotel — Alpine adventure lodge at the foot of Aoraki Mount Cook, New Zealand. Est. 2007.">
+  <title>Grand Alpine Hotel | Mount Cook, New Zealand</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/booking-bar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body data-season="summer">
+
+  <div class="altitude-bar" aria-hidden="true"><div class="altitude-bar__fill"></div></div>
+
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 4L6 34h28L20 4z" fill="#2AA4B5" stroke="#7ECFDA" stroke-width="2"/>
+          <path d="M20 14L12 30h16L20 14z" fill="#0D4F5C"/>
+          <circle cx="20" cy="8" r="3" fill="#FFFFFF"/>
+        </svg>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">GRAND ALPINE</span>
+          <span class="navbar__logo-sub">HOTEL — MOUNT COOK — EST. 2007</span>
+        </div>
+      </a>
+      <nav class="navbar__nav">
+        <ul class="navbar__links">
+          <li><a href="index.html" data-en="Home" data-mi="Kāinga">Home</a></li>
+          <li><a href="rooms.html" data-en="Rooms" data-mi="Rūma">Rooms</a></li>
+          <li><a href="dining.html" data-en="Dining" data-mi="Kai">Dining</a></li>
+          <li><a href="spa.html" data-en="Spa" data-mi="Roto">Spa</a></li>
+          <li><a href="adventures.html" data-en="Adventures" data-mi="Tūāhuatanga">Adventures</a></li>
+          <li><a href="events.html" data-en="Events" data-mi="Hui">Events</a></li>
+          <li><a href="contact.html" data-en="Contact" data-mi="Whakapā">Contact</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <div class="season-toggle" role="group" aria-label="Season toggle">
+            <button class="season-toggle__btn active" data-season="summer" aria-label="Summer" aria-pressed="true">☀</button>
+            <button class="season-toggle__btn" data-season="winter" aria-label="Winter" aria-pressed="false">❄</button>
+          </div>
+          <button class="lang-toggle" aria-label="Switch language">EN / MI</button>
+          <a href="contact.html" class="btn btn--teal" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</a>
+        </div>
+      </nav>
+      <button class="navbar__hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" aria-label="Mobile navigation">
+    <div class="elevation-badge mobile-menu__badge">3,724m / AORAKI MOUNT COOK</div>
+    <a href="index.html" data-en="Home" data-mi="Kāinga">Home</a>
+    <a href="rooms.html" data-en="Rooms" data-mi="Rūma">Rooms</a>
+    <a href="dining.html" data-en="Dining" data-mi="Kai">Dining</a>
+    <a href="spa.html" data-en="Spa" data-mi="Roto">Spa</a>
+    <a href="adventures.html" data-en="Adventures" data-mi="Tūāhuatanga">Adventures</a>
+    <a href="events.html" data-en="Events" data-mi="Hui">Events</a>
+    <a href="contact.html" data-en="Contact" data-mi="Whakapā">Contact</a>
+    <div class="mobile-menu__actions">
+      <div class="season-toggle">
+        <button class="season-toggle__btn active" data-season="summer" aria-label="Summer">☀</button>
+        <button class="season-toggle__btn" data-season="winter" aria-label="Winter">❄</button>
+      </div>
+      <button class="lang-toggle">EN / MI</button>
+    </div>
+  </nav>
+
+  <div class="booking-bar">
+    <div class="booking-bar__inner">
+      <div class="booking-bar__field">
+        <label data-en="Check-In" data-mi="Rā Uru">Check-In</label>
+        <input type="date" aria-label="Check-in date">
+      </div>
+      <div class="booking-bar__field">
+        <label data-en="Check-Out" data-mi="Rā Puta">Check-Out</label>
+        <input type="date" aria-label="Check-out date">
+      </div>
+      <div class="booking-bar__field">
+        <label data-en="Guests" data-mi="Manuhiri">Guests</label>
+        <select aria-label="Number of guests">
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+        </select>
+      </div>
+      <div class="booking-bar__field">
+        <label data-en="Season" data-mi="Kōanga/Hōtoke">Season</label>
+        <select data-booking-season aria-label="Season preference">
+          <option value="summer" data-en="Summer" data-mi="Kōanga">Summer</option>
+          <option value="winter" data-en="Winter" data-mi="Hōtoke">Winter</option>
+        </select>
+      </div>
+      <button class="btn btn--amber" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero hero--home">
+      <div class="hero__bg hero__bg--summer" aria-hidden="true"></div>
+      <div class="hero__bg hero__bg--winter" aria-hidden="true"></div>
+      <div class="hero__overlay"></div>
+      <div class="snow-container" aria-hidden="true"></div>
+      <div class="elevation-badge">3,724m / AORAKI MOUNT COOK</div>
+      <div class="hero__content">
+        <p class="label hero__label" data-en="Mount Cook National Park — New Zealand" data-mi="Te Pāka o Aoraki — Aotearoa">Mount Cook National Park — New Zealand</p>
+        <h1 class="hero__title">
+          <span data-en="Where the Alps Meet the Sky" data-mi="Ko ngā Alpaina e Tūtaki ana ki te Rangi">Where the Alps Meet the Sky</span>
+        </h1>
+        <p class="hero__maori" data-en="Ko ngā Alpaina e Tūtaki ana ki te Rangi" data-mi="Ko ngā Alpaina e Tūtaki ana ki te Rangi">Ko ngā Alpaina e Tūtaki ana ki te Rangi</p>
+        <div class="hero__ctas">
+          <a href="rooms.html" class="btn btn--outline" data-en="Explore the Hotel" data-mi="Tūhura i te Hōtēra">Explore the Hotel</a>
+          <a href="contact.html" class="btn btn--teal" data-en="Book Your Alpine Escape" data-mi="Rēhita tō Ūnga Alpaina">Book Your Alpine Escape</a>
+        </div>
+      </div>
+      <div class="scroll-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- SEASON HIGHLIGHTS -->
+    <section class="season-strip">
+      <div class="season-strip__grid">
+        <div class="season-strip__summer">
+          <div class="season-strip__item">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M24 8L8 40h32L24 8z"/><path d="M16 20l8-8 8 8"/></svg>
+            <span class="label" data-en="Hiking" data-mi="Hīkoi">Hiking</span>
+          </div>
+          <div class="season-strip__item">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="24" r="16"/><path d="M24 12v12l8 4"/></svg>
+            <span class="label" data-en="Glacier Tours" data-mi="Haerenga Kōpatapata">Glacier Tours</span>
+          </div>
+          <div class="season-strip__item">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="20" r="3"/><path d="M12 36c0-6.627 5.373-12 12-12s12 5.373 12 12"/></svg>
+            <span class="label" data-en="Stargazing" data-mi="Mātai Whetū">Stargazing</span>
+          </div>
+          <div class="season-strip__item">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="16" cy="32" r="8"/><circle cx="36" cy="32" r="8"/><path d="M16 32l10-16 10 16"/></svg>
+            <span class="label" data-en="Alpine Cycling" data-mi="Eke Pahikara Alpaina">Alpine Cycling</span>
+          </div>
+        </div>
+        <div class="season-strip__winter">
+          <div class="season-strip__item">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 36l16-28 16 28"/><path d="M16 28h16"/></svg>
+            <span class="label" data-en="Skiing" data-mi="Reti Hukapapa">Skiing</span>
+          </div>
+          <div class="season-strip__item">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><ellipse cx="24" cy="36" rx="16" ry="4"/><path d="M12 36l6-20h12l6 20"/></svg>
+            <span class="label" data-en="Snowshoeing" data-mi="Hīkoi Hukapapa">Snowshoeing</span>
+          </div>
+          <div class="season-strip__item">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M24 8v32M16 16l8-8 8 8M16 32l8 8 8-8"/></svg>
+            <span class="label" data-en="Ice Climbing" data-mi="Piki Tio">Ice Climbing</span>
+          </div>
+          <div class="season-strip__item">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="8" y="12" width="32" height="24" rx="2"/><circle cx="24" cy="24" r="6"/></svg>
+            <span class="label" data-en="Snow Photography" data-mi="Whakaahua Hukapapa">Snow Photography</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCOMMODATION PREVIEW -->
+    <section class="section accommodation-preview">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="label" data-en="Where You Stay" data-mi="Te Wāhi Noho">Where You Stay</span>
+          <h2 data-en="Rest Well After the Summit" data-mi="Okioki pai ana i muri i te Taumata">Rest Well After the Summit</h2>
+          <p class="maori-text">Okioki pai ana i muri i te Taumata</p>
+        </div>
+        <div class="card-grid reveal">
+          <a href="rooms.html" class="tilt-card">
+            <div class="tilt-card__image card-img-mountain"></div>
+            <div class="tilt-card__overlay">
+              <h3 class="tilt-card__title" data-en="Mountain View Rooms" data-mi="Rūma Tiro Maunga">Mountain View Rooms</h3>
+              <span class="tilt-card__price" data-en="From NZD $289/night" data-mi="Mai i te $289 Pō">From NZD $289/night</span>
+            </div>
+          </a>
+          <a href="rooms.html" class="tilt-card">
+            <div class="tilt-card__image card-img-chalet"></div>
+            <div class="tilt-card__overlay">
+              <h3 class="tilt-card__title" data-en="Alpine Suites" data-mi="Suite Alpaina">Alpine Suites</h3>
+              <span class="tilt-card__price" data-en="From NZD $449/night" data-mi="Mai i te $449 Pō">From NZD $449/night</span>
+            </div>
+          </a>
+          <a href="rooms.html" class="tilt-card">
+            <div class="tilt-card__image placeholder-teal"></div>
+            <div class="tilt-card__overlay">
+              <h3 class="tilt-card__title" data-en="Ski-In/Ski-Out Chalets" data-mi="Chalet Reti Hukapapa">Ski-In/Ski-Out Chalets</h3>
+              <span class="tilt-card__price" data-en="From NZD $649/night" data-mi="Mai i te $649 Pō">From NZD $649/night</span>
+            </div>
+          </a>
+        </div>
+        <div class="reveal" style="margin-top:2rem;text-align:center;">
+          <a href="rooms.html" class="btn--link" data-en="View All Rooms →" data-mi="Tirohia ngā Rūma Katoa →">View All Rooms →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADVENTURE SHOWCASE -->
+    <section class="adventure-showcase stone-texture">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="label" data-en="This Season's Adventures" data-mi="Ngā Tūāhuatanga o tēnei Kōanga/Hōtoke">This Season's Adventures</span>
+          <h2 data-en="Answer the Call of the Mountains" data-mi="Whakautu ki te Karanga a ngā Maunga">Answer the Call of the Mountains</h2>
+        </div>
+        <div class="card-grid card-grid--2 reveal">
+          <div class="adventure-showcase__summer">
+            <a href="adventures.html" class="tilt-card activity-card">
+              <div class="tilt-card__image card-img-hiking" style="position:absolute;inset:0;"></div>
+              <div class="tilt-card__overlay">
+                <h3 class="tilt-card__title" data-en="Guided Alpine Hiking" data-mi="Hīkoi Alpaina Arataki">Guided Alpine Hiking</h3>
+                <span class="tilt-card__price" data-en="Full Day · Moderate-Hard" data-mi="Rā Katoa · Waenganui-Kaha">Full Day · Moderate-Hard</span>
+              </div>
+            </a>
+            <a href="adventures.html" class="tilt-card activity-card">
+              <div class="tilt-card__image card-img-stargazing" style="position:absolute;inset:0;"></div>
+              <div class="tilt-card__overlay">
+                <h3 class="tilt-card__title" data-en="Glacier Stargazing" data-mi="Mātai Whetū Kōpatapata">Glacier Stargazing</h3>
+                <span class="tilt-card__price" data-en="Evening · Easy" data-mi="Ahiahi · Ngāwari">Evening · Easy</span>
+              </div>
+            </a>
+          </div>
+          <div class="adventure-showcase__winter">
+            <a href="adventures.html" class="tilt-card activity-card">
+              <div class="tilt-card__image card-img-skiing" style="position:absolute;inset:0;"></div>
+              <div class="tilt-card__overlay">
+                <h3 class="tilt-card__title" data-en="Ski & Snowboard" data-mi="Reti me te Papa Hukapapa">Ski & Snowboard</h3>
+                <span class="tilt-card__price" data-en="Full Day · All Levels" data-mi="Rā Katoa · Ngā Taumata Katoa">Full Day · All Levels</span>
+              </div>
+            </a>
+            <a href="adventures.html" class="tilt-card activity-card">
+              <div class="tilt-card__image placeholder-snow" style="position:absolute;inset:0;"></div>
+              <div class="tilt-card__overlay">
+                <h3 class="tilt-card__title" data-en="Snowshoeing Expedition" data-mi="Haerenga Hīkoi Hukapapa">Snowshoeing Expedition</h3>
+                <span class="tilt-card__price" data-en="Half Day · Easy-Moderate" data-mi="Haurua Rā · Ngāwari-Waenganui">Half Day · Easy-Moderate</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="reveal" style="margin-top:2rem;text-align:center;">
+          <a href="adventures.html" class="btn--link" style="color:var(--teal-light);" data-en="Explore All Activities →" data-mi="Tūhura i ngā Mahi Katoa →">Explore All Activities →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAIL MARKER STATS -->
+    <section class="trail-stats-section">
+      <div class="trail-stats reveal">
+        <div class="trail-marker" style="--rotation:-3deg;">
+          <div class="trail-marker__sign"><span class="trail-marker__number" data-count="17" data-suffix="+">0+</span></div>
+          <span class="trail-marker__label" data-en="Years of Alpine Hospitality" data-mi="Tau o te Manaaki Alpaina">Years of Alpine Hospitality</span>
+        </div>
+        <div class="trail-marker" style="--rotation:2deg;">
+          <div class="trail-marker__sign"><span class="trail-marker__number" data-count="3724" data-suffix="m">0m</span></div>
+          <span class="trail-marker__label" data-en="Aoraki Mount Cook Elevation" data-mi="Teitei o Aoraki">Aoraki Mount Cook Elevation</span>
+        </div>
+        <div class="trail-marker" style="--rotation:-2deg;">
+          <div class="trail-marker__sign"><span class="trail-marker__number" data-count="99" data-percent="true">0%</span></div>
+          <span class="trail-marker__label" data-en="Guest Satisfaction Rate" data-mi="Te Reiti Whakamihi Manuhiri">Guest Satisfaction Rate</span>
+        </div>
+        <div class="trail-marker" style="--rotation:4deg;">
+          <div class="trail-marker__sign"><span class="trail-marker__number" data-count="4">0</span></div>
+          <span class="trail-marker__label" data-en="Seasons of Adventure" data-mi="Ngā Kōanga o te Tūāhuatanga">Seasons of Adventure</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DINING PREVIEW -->
+    <section class="parallax-section dining-preview">
+      <div class="parallax-section__overlay"></div>
+      <div class="parallax-section__content reveal">
+        <span class="label" data-en="Alpine Cuisine" data-mi="Kai Alpaina">Alpine Cuisine</span>
+        <h2 data-en="Farm-to-Summit Dining" data-mi="Kai nō te Māra ki te Taumata">Farm-to-Summit Dining</h2>
+        <p class="maori-text">Kai nō te Māra ki te Taumata</p>
+        <p data-en="Locally sourced New Zealand ingredients meet alpine tradition in our panoramic summit restaurant. Every meal comes with a view of Aoraki." data-mi="Ko ngā kai nō Aotearoa e tutuki ana ki ngā tikanga alpaina i roto i tō mātou wharekai tiro maunga. He tirohanga ki a Aoraki i ia kai.">Locally sourced New Zealand ingredients meet alpine tradition in our panoramic summit restaurant. Every meal comes with a view of Aoraki.</p>
+        <a href="dining.html" class="btn btn--outline" data-en="Explore Dining →" data-mi="Tūhura i te Kai →">Explore Dining →</a>
+      </div>
+    </section>
+
+    <!-- SPA TEASER -->
+    <section class="parallax-section spa-teaser">
+      <div class="parallax-section__overlay"></div>
+      <div class="parallax-section__content reveal">
+        <h2 data-en="Soak Under the Stars" data-mi="Kaukau ana i raro i ngā Whetū">Soak Under the Stars</h2>
+        <p class="maori-text">Kaukau ana i raro i ngā Whetū</p>
+        <p data-en="Outdoor thermal pools with Mount Cook views. Open year-round beneath the Southern Hemisphere's finest dark sky." data-mi="Ngā roto wera o waho me te tirohanga ki a Aoraki. Tuwhera i ngā tau katoa i raro i te rangi pōuri pai rawa o te Tonga.">Outdoor thermal pools with Mount Cook views. Open year-round beneath the Southern Hemisphere's finest dark sky.</p>
+        <a href="spa.html" class="btn btn--teal" data-en="Discover the Spa →" data-mi="Tūhura i te Roto →">Discover the Spa →</a>
+      </div>
+    </section>
+
+    <!-- DARK SKY FEATURE -->
+    <section class="star-field stone-texture">
+      <div class="star-field__stars" aria-hidden="true"></div>
+      <div class="star-field__content">
+        <div class="reveal">
+          <span class="label" data-en="Aoraki Mackenzie International Dark Sky Reserve" data-mi="Te Rahui Rangi Pōuri o Aoraki Mackenzie">Aoraki Mackenzie International Dark Sky Reserve</span>
+          <h2 data-en="New Zealand's Finest Dark Sky" data-mi="Te Rangi Pōuri Pai rawa o Aotearoa">New Zealand's Finest Dark Sky</h2>
+          <p data-en="Mount Cook Village sits within one of only a handful of Gold-Tier International Dark Sky Reserves in the world. With virtually no light pollution, the Milky Way stretches from horizon to horizon — a spectacle best enjoyed from our hot pools or guided stargazing tours." data-mi="Kei roto te kāinga o Aoraki i tētahi o ngā Rahui Rangi Pōuri Auraki o te ao. Kāore he whakapōrearea mārama, ka toro te Iārā whetū mai i te pae ki te pae — he ātaahua rawa mai i ō mātou roto wera.">Mount Cook Village sits within one of only a handful of Gold-Tier International Dark Sky Reserves in the world. With virtually no light pollution, the Milky Way stretches from horizon to horizon — a spectacle best enjoyed from our hot pools or guided stargazing tours.</p>
+        </div>
+        <div class="star-field__image reveal">
+          <img src="assets/images/adventures-stargazing.jpg" alt="Milky Way above Aoraki Mount Cook" loading="lazy" width="600" height="450">
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="testimonial-grid reveal">
+          <div class="testimonial-card">
+            <blockquote data-en="&quot;Waking up to Aoraki from our mountain view room was the highlight of our New Zealand trip. The lodge feels rugged yet incredibly warm.&quot;" data-mi="&quot;Ko te whakaarahanga ki a Aoraki mai i tō mātou rūma te tino ātaahua o tō mātou haerenga Aotearoa. He ngāwari, he mahana hoki te whare.&quot;">"Waking up to Aoraki from our mountain view room was the highlight of our New Zealand trip. The lodge feels rugged yet incredibly warm."</blockquote>
+            <cite data-en="— Sarah & James, Melbourne" data-mi="— Sarah rāua ko James, Melbourne">— Sarah & James, Melbourne</cite>
+          </div>
+          <div class="testimonial-card">
+            <blockquote data-en="&quot;The stargazing tour from the hotel was extraordinary. Seventeen years of hospitality shows in every detail — from the spa to the summit restaurant.&quot;" data-mi="&quot;He tino whakamiharo te haerenga mātai whetū. E kitea ana ngā tau tekau mā whitu o te manaaki i ia taipitopito.&quot;">"The stargazing tour from the hotel was extraordinary. Seventeen years of hospitality shows in every detail — from the spa to the summit restaurant."</blockquote>
+            <cite data-en="— Hiroshi T., Tokyo" data-mi="— Hiroshi T., Tokyo">— Hiroshi T., Tokyo</cite>
+          </div>
+          <div class="testimonial-card">
+            <blockquote data-en="&quot;Ski-in chalet access made our winter escape seamless. The apres-ski bar by the fireplace is exactly what alpine adventure should feel like.&quot;" data-mi="&quot;He ngāwari te uru atu ki te chalet i te hōtoke. Ko te pae apres-ski i te ahi he pērā anō te tikanga o te tūāhuatanga alpaina.&quot;">"Ski-in chalet access made our winter escape seamless. The apres-ski bar by the fireplace is exactly what alpine adventure should feel like."</blockquote>
+            <cite data-en="— Emma & Liam, Wellington" data-mi="— Emma rāua ko Liam, Te Whanganui-a-Tara">— Emma & Liam, Wellington</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING CTA -->
+    <section class="cta-section booking-cta">
+      <div class="cta-section__overlay"></div>
+      <div class="cta-section__content reveal">
+        <h2 data-en="Your Alpine Escape Awaits" data-mi="E tatari ana tō Ūnga Alpaina">Your Alpine Escape Awaits</h2>
+        <p class="maori-text">E tatari ana tō Ūnga Alpaina</p>
+        <a href="contact.html" class="btn btn--amber" data-en="Book Your Stay" data-mi="Rēhita tō Noho">Book Your Stay</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer stone-texture">
+    <div class="footer__headline">
+      <h2 data-en="Adventure Awaits at Every Altitude" data-mi="He Tūāhuatanga kei ia Teiteitanga">Adventure Awaits at Every Altitude</h2>
+      <p class="maori-text">He Tūāhuatanga kei ia Teiteitanga</p>
+    </div>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <div class="footer__logo">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/><path d="M20 14L12 30h16L20 14z" fill="#0D4F5C"/></svg>
+          <span>GRAND ALPINE</span>
+        </div>
+        <p data-en="Seventeen years of alpine hospitality at the foot of Aoraki — New Zealand's highest peak." data-mi="Tekau mā whitu ngā tau o te manaaki alpaina i raro i a Aoraki — te maunga teitei rawa o Aotearoa.">Seventeen years of alpine hospitality at the foot of Aoraki — New Zealand's highest peak.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4 data-en="Explore" data-mi="Tūhura">Explore</h4>
+        <ul>
+          <li><a href="adventures.html" data-en="Adventures" data-mi="Tūāhuatanga">Adventures</a></li>
+          <li><a href="events.html" data-en="Events" data-mi="Hui">Events</a></li>
+          <li><a href="contact.html" data-en="Contact" data-mi="Whakapā">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 data-en="Stay & Dine" data-mi="Noho & Kai">Stay & Dine</h4>
+        <ul>
+          <li><a href="rooms.html" data-en="Rooms & Suites" data-mi="Rūma & Suite">Rooms & Suites</a></li>
+          <li><a href="dining.html" data-en="Dining" data-mi="Kai">Dining</a></li>
+          <li><a href="spa.html" data-en="Spa & Hot Pools" data-mi="Roto Whakaora">Spa & Hot Pools</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 data-en="Contact" data-mi="Whakapā">Contact</h4>
+        <div class="footer__contact-item">
+          <strong>Email</strong>
+          <a href="mailto:stay@grandalpinehotel.nz">stay@grandalpinehotel.nz</a>
+        </div>
+        <div class="footer__contact-item">
+          <strong data-en="Address" data-mi="Wāhi Noho">Address</strong>
+          1 Bowen Drive, Mount Cook Village, Aoraki Mount Cook 7999, Canterbury, New Zealand
+        </div>
+        <div class="footer__contact-item">
+          <strong data-en="Hours" data-mi="Ngā Haora">Hours</strong>
+          <span data-en="Front Desk 24/7" data-mi="Te Papatohu 24/7">Front Desk 24/7</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2024 GRAND ALPINE HOTEL — EST. 2007 — MOUNT COOK, AOTEAROA</p>
+      <p class="maori-line">Kei raro i te maru o Aoraki — Tekau mā whitu ngā tau</p>
+    </div>
+  </footer>
+
+  <script src="js/season.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

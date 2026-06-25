@@ -1,0 +1,108 @@
+/* Page-specific section layouts */
+.accommodation-preview {
+  background: var(--alpine-white);
+}
+
+.adventure-showcase {
+  background: var(--teal-deep);
+  padding: 5rem 0;
+}
+
+.adventure-showcase .section-heading .label {
+  color: var(--teal-light);
+}
+
+.adventure-showcase .section-heading h2 {
+  color: var(--snow);
+}
+
+.adventure-showcase .section-heading .maori-text {
+  color: var(--teal-pale);
+}
+
+.dining-preview {
+  background-image: url('../assets/images/dining-restaurant.jpg');
+}
+
+.spa-teaser {
+  background-image: url('../assets/images/spa-hot-pools.jpg');
+}
+
+.booking-cta {
+  background-image: url('../assets/images/hero-mountain-exterior.jpg');
+}
+
+.testimonials-section {
+  background: var(--teal-pale);
+}
+
+.trail-stats-section {
+  background: var(--alpine-white);
+  padding: 5rem 0;
+}
+
+/* Dining page */
+.apres-section {
+  background-image: url('../assets/images/dining-apres-ski.jpg');
+}
+
+/* Spa page */
+.spa-pools-section {
+  background-image: url('../assets/images/spa-hot-pools.jpg');
+}
+
+/* Events page */
+.conference-section {
+  padding: 5rem 0;
+}
+
+.team-building-section {
+  background: var(--teal-pale);
+  padding: 5rem 0;
+}
+
+.corporate-section {
+  padding: 5rem 0;
+}
+
+/* Contact page */
+.contact-section {
+  padding: 5rem 0;
+  background: var(--alpine-white);
+}
+
+/* Spa interior split */
+.spa-split {
+  padding: 5rem 0;
+}
+
+.spa-split__image {
+  background-image: url('../assets/images/spa-interior.jpg');
+}
+
+/* Events conference image */
+.events-image {
+  background-image: url('../assets/images/events-conference.jpg');
+}
+
+/* Room images */
+.room-img-mountain { background-image: url('../assets/images/rooms-mountain-view.jpg'); }
+.room-img-chalet { background-image: url('../assets/images/rooms-chalet.jpg'); }
+
+/* Card image backgrounds */
+.card-img-mountain { background-image: url('../assets/images/rooms-mountain-view.jpg'); }
+.card-img-chalet { background-image: url('../assets/images/rooms-chalet.jpg'); }
+.card-img-hiking { background-image: url('../assets/images/adventures-hiking.jpg'); }
+.card-img-stargazing { background-image: url('../assets/images/adventures-stargazing.jpg'); }
+.card-img-skiing { background-image: url('../assets/images/adventures-skiing.jpg'); }
+
+/* Bilingual: text is swapped via language.js on [data-en][data-mi] elements.
+   Only hide Maori-only supplementary blocks in English mode. */
+body:not(.lang-mi) [data-mi-only] {
+  display: none;
+}
+
+/* Hide redundant Maori subtitle when main heading is already in Te Reo */
+body.lang-mi .hero__maori {
+  display: none;
+}

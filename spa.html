@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spa & Hot Pools at Grand Alpine Hotel, Mount Cook.">
+  <title>Spa & Hot Pools | Grand Alpine Hotel</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/booking-bar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body data-season="summer">
+  <div class="altitude-bar" aria-hidden="true"><div class="altitude-bar__fill"></div></div>
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/><path d="M20 14L12 30h16L20 14z" fill="#0D4F5C"/></svg>
+        <div class="navbar__logo-text"><span class="navbar__logo-name">GRAND ALPINE</span><span class="navbar__logo-sub">HOTEL — MOUNT COOK — EST. 2007</span></div>
+      </a>
+      <nav class="navbar__nav">
+        <ul class="navbar__links">
+          <li><a href="index.html" data-en="Home" data-mi="Kāinga">Home</a></li>
+          <li><a href="rooms.html" data-en="Rooms" data-mi="Rūma">Rooms</a></li>
+          <li><a href="dining.html" data-en="Dining" data-mi="Kai">Dining</a></li>
+          <li><a href="spa.html" data-en="Spa" data-mi="Roto">Spa</a></li>
+          <li><a href="adventures.html" data-en="Adventures" data-mi="Tūāhuatanga">Adventures</a></li>
+          <li><a href="events.html" data-en="Events" data-mi="Hui">Events</a></li>
+          <li><a href="contact.html" data-en="Contact" data-mi="Whakapā">Contact</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <div class="season-toggle"><button class="season-toggle__btn active" data-season="summer">☀</button><button class="season-toggle__btn" data-season="winter">❄</button></div>
+          <button class="lang-toggle">EN / MI</button>
+          <a href="contact.html" class="btn btn--teal" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</a>
+        </div>
+      </nav>
+      <button class="navbar__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-menu"><a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="dining.html">Dining</a><a href="spa.html">Spa</a><a href="adventures.html">Adventures</a><a href="events.html">Events</a><a href="contact.html">Contact</a></nav>
+  <div class="booking-bar">
+    <div class="booking-bar__inner">
+      <div class="booking-bar__field"><label data-en="Check-In" data-mi="Rā Uru">Check-In</label><input type="date"></div>
+      <div class="booking-bar__field"><label data-en="Check-Out" data-mi="Rā Puta">Check-Out</label><input type="date"></div>
+      <div class="booking-bar__field"><label data-en="Guests" data-mi="Manuhiri">Guests</label><select><option>1</option><option>2</option></select></div>
+      <div class="booking-bar__field"><label data-en="Season" data-mi="Kōanga/Hōtoke">Season</label><select data-booking-season><option value="summer">Summer</option><option value="winter">Winter</option></select></div>
+      <button class="btn btn--amber" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero hero--page hero--spa">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title"><span data-en="Spa & Hot Pools" data-mi="Roto Whakaora">Spa & Hot Pools</span></h1>
+        <p class="hero__maori">Roto Whakaora</p>
+      </div>
+    </section>
+
+    <section class="parallax-section spa-pools-section">
+      <div class="parallax-section__overlay"></div>
+      <div class="parallax-section__content reveal">
+        <span class="label" data-en="Outdoor Thermal Pools" data-mi="Ngā Roto Wera o Waho">Outdoor Thermal Pools</span>
+        <h2 data-en="Restore Beneath the Peaks" data-mi="Whakaorangia i raro i ngā Taumata">Restore Beneath the Peaks</h2>
+        <p data-en="Our outdoor thermal pools offer unobstructed views of Aoraki Mount Cook, open year-round. Soak in glacier-teal waters as steam rises into the alpine air — and on clear nights, stargaze from the warmth of the pool beneath the Southern Hemisphere's darkest skies." data-mi="He tirohanga kore ārai ki a Aoraki mai i ō mātou roto wera. Kaukau i ngā wai kōpatapata i raro i ngā whetū o te pō.">Our outdoor thermal pools offer unobstructed views of Aoraki Mount Cook, open year-round. Soak in glacier-teal waters as steam rises into the alpine air — and on clear nights, stargaze from the warmth of the pool beneath the Southern Hemisphere's darkest skies.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="label" data-en="Treatments" data-mi="Whakaora">Treatments</span>
+          <h2 data-en="Alpine Wellness Rituals" data-mi="Ngā Ritenga Hauora Alpaina">Alpine Wellness Rituals</h2>
+        </div>
+        <div class="treatment-grid reveal">
+          <div class="treatment-card">
+            <h3 data-en="Alpine Stone Massage" data-mi="Mirimiri Kōhatu Alpaina">Alpine Stone Massage</h3>
+            <span class="label">90 min</span>
+          </div>
+          <div class="treatment-card">
+            <h3 data-en="Mountain Herb Body Wrap" data-mi="Takai Tinana Rau Maunga">Mountain Herb Body Wrap</h3>
+            <span class="label">60 min</span>
+          </div>
+          <div class="treatment-card">
+            <h3 data-en="Couple's Summit Retreat" data-mi="Whakatau Taumata Tokorua">Couple's Summit Retreat</h3>
+            <span class="label">120 min</span>
+          </div>
+          <div class="treatment-card">
+            <h3 data-en="Deep Tissue Recovery" data-mi="Whakaora Uaua Hōhonu">Deep Tissue Recovery</h3>
+            <span class="label">75 min</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--teal-pale);">
+      <div class="container">
+        <div class="section-heading reveal" style="text-align:center;">
+          <span class="label" data-en="Facilities" data-mi="Ngā Whare">Facilities</span>
+          <h2 data-en="Complete Alpine Wellness" data-mi="Hauora Alpaina Katoa">Complete Alpine Wellness</h2>
+        </div>
+        <div class="facility-strip reveal">
+          <div class="facility-strip__item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="20" cy="26" rx="16" ry="6"/><path d="M8 26c0-10 5-18 12-18s12 8 12 18"/></svg><span data-en="Hot Pools" data-mi="Roto Wera">Hot Pools</span></div>
+          <div class="facility-strip__item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="12" width="24" height="20" rx="2"/><path d="M8 20h24"/></svg><span data-en="Sauna" data-mi="Sauna">Sauna</span></div>
+          <div class="facility-strip__item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 28c4-16 12-16 16 0"/><circle cx="20" cy="12" r="4"/></svg><span data-en="Steam Room" data-mi="Rūma Kōtao">Steam Room</span></div>
+          <div class="facility-strip__item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="10" width="28" height="22" rx="2"/><path d="M14 18h12"/></svg><span data-en="Treatment Rooms" data-mi="Rūma Whakaora">Treatment Rooms</span></div>
+          <div class="facility-strip__item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 28h24"/><path d="M12 28V16l8-6 8 6v12"/></svg><span data-en="Relaxation Lounge" data-mi="Rūma Okioki">Relaxation Lounge</span></div>
+          <div class="facility-strip__item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 30h28"/><path d="M10 30V14l10-8 10 8v16"/></svg><span data-en="Mountain Terrace" data-mi="Papa Rārangi Maunga">Mountain Terrace</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section spa-split">
+      <div class="container">
+        <div class="split-section reveal">
+          <div class="split-section__image spa-split__image tilt-image"></div>
+          <div class="split-section__content">
+            <span class="label" data-en="Treatment Rooms" data-mi="Rūma Whakaora">Treatment Rooms</span>
+            <h2 data-en="Sanctuary in Stone & Timber" data-mi="Wāhi Tapu i te Kōhatu me te Rākau">Sanctuary in Stone & Timber</h2>
+            <p data-en="Our treatment rooms blend natural stone, exposed timber, and deep teal accents with panoramic snow views. Mountain herbs and river stones ground every ritual in the landscape of Aoraki." data-mi="He kōhatu, he rākau, he tae kōpatapata hōhonu me te tiro hukapapa. He rau maunga me ngā kōhatu awa i ia ritenga.">Our treatment rooms blend natural stone, exposed timber, and deep teal accents with panoramic snow views. Mountain herbs and river stones ground every ritual in the landscape of Aoraki.</p>
+            <a href="contact.html" class="btn btn--teal" data-en="Book a Treatment" data-mi="Rēhita Whakaora">Book a Treatment</a>
+            <p class="enquiry-note" data-en="Email spa@grandalpinehotel.co.nz for enquiries" data-mi="Īmēra spa@grandalpinehotel.co.nz mō ngā pātai">Email <a href="mailto:spa@grandalpinehotel.co.nz">spa@grandalpinehotel.co.nz</a> for enquiries</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer stone-texture">
+    <div class="footer__headline"><h2 data-en="Adventure Awaits at Every Altitude" data-mi="He Tūāhuatanga kei ia Teiteitanga">Adventure Awaits at Every Altitude</h2></div>
+    <div class="footer__grid">
+      <div class="footer__col"><div class="footer__logo"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/></svg><span>GRAND ALPINE</span></div><p>Seventeen years of alpine hospitality at the foot of Aoraki.</p></div>
+      <div class="footer__col"><h4>Explore</h4><ul><li><a href="adventures.html">Adventures</a></li><li><a href="events.html">Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h4>Stay & Dine</h4><ul><li><a href="rooms.html">Rooms</a></li><li><a href="dining.html">Dining</a></li><li><a href="spa.html">Spa</a></li></ul></div>
+      <div class="footer__col"><h4>Contact</h4><div class="footer__contact-item"><strong>Email</strong><a href="mailto:stay@grandalpinehotel.nz">stay@grandalpinehotel.nz</a></div><div class="footer__contact-item"><strong>Address</strong>1 Bowen Drive, Mount Cook Village, Aoraki Mount Cook 7999, Canterbury, New Zealand</div></div>
+    </div>
+    <div class="footer__bottom"><p>© 2024 GRAND ALPINE HOTEL — EST. 2007</p></div>
+  </footer>
+  <script src="js/season.js"></script><script src="js/language.js"></script><script src="js/main.js"></script><script src="js/tilt.js"></script><script src="js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dining & Apres-Ski Bar at Grand Alpine Hotel, Mount Cook.">
+  <title>Dining | Grand Alpine Hotel</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/booking-bar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body data-season="summer">
+  <div class="altitude-bar" aria-hidden="true"><div class="altitude-bar__fill"></div></div>
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/><path d="M20 14L12 30h16L20 14z" fill="#0D4F5C"/></svg>
+        <div class="navbar__logo-text"><span class="navbar__logo-name">GRAND ALPINE</span><span class="navbar__logo-sub">HOTEL — MOUNT COOK — EST. 2007</span></div>
+      </a>
+      <nav class="navbar__nav">
+        <ul class="navbar__links">
+          <li><a href="index.html" data-en="Home" data-mi="Kāinga">Home</a></li>
+          <li><a href="rooms.html" data-en="Rooms" data-mi="Rūma">Rooms</a></li>
+          <li><a href="dining.html" data-en="Dining" data-mi="Kai">Dining</a></li>
+          <li><a href="spa.html" data-en="Spa" data-mi="Roto">Spa</a></li>
+          <li><a href="adventures.html" data-en="Adventures" data-mi="Tūāhuatanga">Adventures</a></li>
+          <li><a href="events.html" data-en="Events" data-mi="Hui">Events</a></li>
+          <li><a href="contact.html" data-en="Contact" data-mi="Whakapā">Contact</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <div class="season-toggle"><button class="season-toggle__btn active" data-season="summer">☀</button><button class="season-toggle__btn" data-season="winter">❄</button></div>
+          <button class="lang-toggle">EN / MI</button>
+          <a href="contact.html" class="btn btn--teal" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</a>
+        </div>
+      </nav>
+      <button class="navbar__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-menu"><a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="dining.html">Dining</a><a href="spa.html">Spa</a><a href="adventures.html">Adventures</a><a href="events.html">Events</a><a href="contact.html">Contact</a></nav>
+  <div class="booking-bar">
+    <div class="booking-bar__inner">
+      <div class="booking-bar__field"><label data-en="Check-In" data-mi="Rā Uru">Check-In</label><input type="date"></div>
+      <div class="booking-bar__field"><label data-en="Check-Out" data-mi="Rā Puta">Check-Out</label><input type="date"></div>
+      <div class="booking-bar__field"><label data-en="Guests" data-mi="Manuhiri">Guests</label><select><option>2</option><option>4</option><option>6</option></select></div>
+      <div class="booking-bar__field"><label data-en="Season" data-mi="Kōanga/Hōtoke">Season</label><select data-booking-season><option value="summer">Summer</option><option value="winter">Winter</option></select></div>
+      <button class="btn btn--amber" data-en="Book Now" data-mi="Rēhita Ināianei">Book Now</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero hero--page hero--dining">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title"><span data-en="Dining & Apres-Ski" data-mi="Kai me te Apres-Ski">Dining & Apres-Ski</span></h1>
+        <p class="hero__maori">Kai me te Apres-Ski</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="split-section reveal">
+          <div class="split-section__content">
+            <span class="label" data-en="Summit Restaurant" data-mi="Wharekai Taumata">Summit Restaurant</span>
+            <h2 data-en="The Summit Restaurant" data-mi="Te Wharekai Taumata">The Summit Restaurant</h2>
+            <p data-en="Our flagship restaurant celebrates locally sourced New Zealand ingredients with alpine-inspired cuisine. Floor-to-ceiling windows frame panoramic views of Aoraki and the Southern Alps while you dine." data-mi="Ka whakanuia e tō mātou wharekai matua ngā kai nō Aotearoa me te kai whakaarohia e ngā Alpaina. He matapihi nui ki a Aoraki me ngā Alpaina o te Tonga.">Our flagship restaurant celebrates locally sourced New Zealand ingredients with alpine-inspired cuisine. Floor-to-ceiling windows frame panoramic views of Aoraki and the Southern Alps while you dine.</p>
+            <div class="split-section__hours">
+              <span data-en="Breakfast 7AM–10AM | Dinner 6PM–9:30PM" data-mi="Parakuihi 7AM–10AM | Rāhina 6PM–9:30PM">Breakfast 7AM–10AM | Dinner 6PM–9:30PM</span>
+            </div>
+            <a href="contact.html" class="btn btn--teal" data-en="Make a Reservation" data-mi="Rēhita Tēnei">Make a Reservation</a>
+          </div>
+          <div class="split-section__image tilt-image" style="background-image:url('assets/images/dining-restaurant.jpg');"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="parallax-section apres-section">
+      <div class="parallax-section__overlay"></div>
+      <div class="parallax-section__content reveal">
+        <h2 data-en="The Base Camp Bar" data-mi="Te Papa Hōhonu">The Base Camp Bar</h2>
+        <p class="maori-text">Te Papa Hōhonu</p>
+        <p data-en="Craft beers, New Zealand wines, and warming alpine cocktails beside a roaring stone fireplace. Live acoustic music every weekend after the slopes close." data-mi="Pia mahi, waina Aotearoa, me ngā inu mahana i te taha o te ahi kōhatu. He puoro ora ia wiki mutunga i te kati o ngā papa reti.">Craft beers, New Zealand wines, and warming alpine cocktails beside a roaring stone fireplace. Live acoustic music every weekend after the slopes close.</p>
+        <p class="split-section__hours" style="color:var(--teal-light);" data-en="Daily 3PM – Late" data-mi="Ia Rā 3PM – Tōmuri">Daily 3PM – Late</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="label" data-en="Our Menus" data-mi="Ō Mātou Rārangi Kai">Our Menus</span>
+          <h2 data-en="Taste the Alpine" data-mi="Whakamātauria te Alpaina">Taste the Alpine</h2>
+        </div>
+        <div class="menu-grid reveal">
+          <div class="menu-card">
+            <h3 data-en="Alpine Breakfast" data-mi="Parakuihi Alpaina">Alpine Breakfast</h3>
+            <div class="menu-card__divider"></div>
+            <ul>
+              <li data-en="Mount Cook Station Eggs Benedict" data-mi="Hēki Benedict">Mount Cook Station Eggs Benedict</li>
+              <li data-en="Smoked Salmon & Avocado Toast" data-mi="Toast Kōura me te Avocado">Smoked Salmon & Avocado Toast</li>
+              <li data-en="Alpine Granola Bowl" data-mi="Pāraera Granola Alpaina">Alpine Granola Bowl</li>
+              <li data-en="Mackenzie Country Sausages" data-mi="Ngā Tōtōtō Mackenzie">Mackenzie Country Sausages</li>
+            </ul>
+          </div>
+          <div class="menu-card">
+            <h3 data-en="Summit Dinner" data-mi="Rāhina Taumata">Summit Dinner</h3>
+            <div class="menu-card__divider"></div>
+            <ul>
+              <li data-en="Canterbury Lamb Rack" data-mi="Rāti Reme Canterbury">Canterbury Lamb Rack</li>
+              <li data-en="Glacier-Fed Salmon" data-mi="Kōura Kōpatapata">Glacier-Fed Salmon</li>
+              <li data-en="Wild Venison with Berry Jus" data-mi="Tia Wild me te Jus Berry">Wild Venison with Berry Jus</li>
+              <li data-en="Alpine Mushroom Risotto" data-mi="Risotto Harore Alpaina">Alpine Mushroom Risotto</li>
+            </ul>
+          </div>
+          <div class="menu-card">
+            <h3 data-en="Base Camp Cocktails" data-mi="Inu Base Camp">Base Camp Cocktails</h3>
+            <div class="menu-card__divider"></div>
+            <ul>
+              <li data-en="Aoraki Old Fashioned" data-mi="Aoraki Old Fashioned">Aoraki Old Fashioned</li>
+              <li data-en="Glacier G&T" data-mi="Glacier G&T">Glacier G&T</li>
+              <li data-en="Summit Hot Toddy" data-mi="Toddy Mahana Taumata">Summit Hot Toddy</li>
+              <li data-en="Southern Lights Spritz" data-mi="Spritz Rā Whiti Tonga">Southern Lights Spritz</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer stone-texture">
+    <div class="footer__headline"><h2 data-en="Adventure Awaits at Every Altitude" data-mi="He Tūāhuatanga kei ia Teiteitanga">Adventure Awaits at Every Altitude</h2></div>
+    <div class="footer__grid">
+      <div class="footer__col"><div class="footer__logo"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L6 34h28L20 4z" fill="#2AA4B5"/></svg><span>GRAND ALPINE</span></div><p>Seventeen years of alpine hospitality at the foot of Aoraki.</p></div>
+      <div class="footer__col"><h4>Explore</h4><ul><li><a href="adventures.html">Adventures</a></li><li><a href="events.html">Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h4>Stay & Dine</h4><ul><li><a href="rooms.html">Rooms</a></li><li><a href="dining.html">Dining</a></li><li><a href="spa.html">Spa</a></li></ul></div>
+      <div class="footer__col"><h4>Contact</h4><div class="footer__contact-item"><strong>Email</strong><a href="mailto:stay@grandalpinehotel.nz">stay@grandalpinehotel.nz</a></div><div class="footer__contact-item"><strong>Address</strong>1 Bowen Drive, Mount Cook Village, Aoraki Mount Cook 7999, Canterbury, New Zealand</div></div>
+    </div>
+    <div class="footer__bottom"><p>© 2024 GRAND ALPINE HOTEL — EST. 2007</p></div>
+  </footer>
+  <script src="js/season.js"></script><script src="js/language.js"></script><script src="js/main.js"></script><script src="js/tilt.js"></script><script src="js/booking.js"></script>
+</body>
+</html>
